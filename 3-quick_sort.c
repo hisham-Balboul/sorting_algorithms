@@ -50,14 +50,14 @@ size_t lomuto_partition(int *array, size_t size, ssize_t lo, ssize_t hi)
  *
  * Return: void
  */
-void qsort(int *array, size_t size, ssize_t lo, ssize_t hi)
+void qSort(int *array, size_t size, ssize_t lo, ssize_t hi)
 {
 	if (lo < hi)
 	{
 		size_t p = lomuto_partition(array, size, lo, hi);
 
-		qsort(array, size, lo, p - 1);
-		qsort(array, size, p + 1, hi);
+		qSort(array, size, lo, p - 1);
+		qSort(array, size, p + 1, hi);
 	}
 }
 
@@ -72,5 +72,5 @@ void quick_sort(int *array, size_t size)
 {
 	if (!array || !size)
 		return;
-	qsort(array, size, 0, size - 1);
+	qSort(array, size, 0, size - 1);
 }
