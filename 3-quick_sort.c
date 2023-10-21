@@ -42,7 +42,7 @@ size_t lomuto_partition(int *array, size_t size, ssize_t lo, ssize_t hi)
 }
 
 /**
- * qsort - quick sorts via Lomuto partitioning scheme
+ * qSort - quick sorts via Lomuto partitioning scheme
  * @array: the integer array to sort
  * @size: the size of the array
  * @lo: the low index of the sort range
